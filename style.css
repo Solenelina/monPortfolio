@@ -290,7 +290,6 @@ nav a {
 }
 
 .swiper-button-prev, .swiper-button-next {
-    
     width: 50px;
     height: 50px;
     position: absolute;
@@ -311,6 +310,14 @@ nav a {
     min-height: 460px;
 }
 
+.projects-img {
+    width: 300px; /* Taille fixe pour uniformiser les images */
+    height: 250px;
+    object-fit: contain; /* Affiche l'image entière sans la couper */
+    display: block;
+    margin: auto;
+    background-color: #f0f0f0; /* Optionnel : couleur de fond pour les zones vides */
+}
 
 /* =========== RECOMMANDATION =========== */
 #recommendations {
@@ -511,9 +518,3 @@ footer {
 .social-link[href*="mailto"]:hover { color: #D14836; } /* Gmail */
 .social-link[href*="linkedin"]:hover { color: #0077B5; }  /* LinkedIn */
 .social-link[href*="github"]:hover { color: #6E5494; }  /* GitHub */
-
-
-/*
-mettre swiper à 1 pour responsif
-mettre meme taille pour les images dans swiper
-*/
