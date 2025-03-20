@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solène Martin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Solène MARTIN</h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#recommendations">Recommandations</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hello-people">
+                <h2 id="typing-text">Hello <span id="dynamic-word"></span></h2>
+            </div>
+            <h1>Solène MARTIN</h1>
+            <p>Développeuse informatique et assistante chef de projet</p>
+            <a href="#about" class="btn">Plus d'infos</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <div class="about-container">
+            <p>
+                Passionnée par l'informatique et les nouvelles technologies, j'ai développé une solide expérience en gestion de projet 
+                et en développement à travers mon alternance et mes engagements associatifs. Curieuse et polyvalente, j'aime analyser les besoins, 
+                structurer des solutions et collaborer avec des équipes pluridisciplinaires. Mon dynamisme et mon sens de l'organisation me 
+                permettent de mener à bien des projets ambitieux, tout en gardant une approche pragmatique et centrée sur l'utilisateur.
+            </p>
+            <img src="images/profil2.png" alt="Photo de Solène Martin">
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Compétences</h2>
+    
+        <div class="soft-skills">
+            <div>
+                <img src="images/icons/problem-solving.png" alt="Problème">
+                <p>Résolution de problèmes</p> <!-- Esprit d’analyse -->
+            </div>
+            <div>
+                <img src="images/icons/listening.png" alt="Patience">
+                <p>Communication client</p> <!-- Leadership & engagement -->
+            </div>
+            <div>
+                <img src="images/icons/teamwork.png" alt="Collaboration">
+                <p>Travail en équipe</p>
+            </div>
+            <div>
+                <img src="images/icons/adaptation.png" alt="Adaptation">
+                <p>Capacité d'adaptation</p>
+            </div>
+            <div>
+                <img src="images/icons/curiosity.png" alt="Curiosité">
+                <p>Curiosité et auto-apprentissage</p>
+            </div>
+        </div>
+    
+        <div class="skills-container">
+            <!-- Hard skills -->
+            <div class="hard-skills">
+                <h3 id="skillTop">BACK-END</h3>
+                <p>PHP</p><div class="bar"><div class="fill" style="width: 70%;"></div></div>
+                <p>Java</p><div class="bar"><div class="fill" style="width: 50%;"></div></div>
+                <p>SQL/NoSQL</p><div class="bar"><div class="fill" style="width: 85%;"></div></div>
+    
+                <h3>FRONT-END</h3>
+                <p>HTML/CSS/JS</p><div class="bar"><div class="fill" style="width: 80%;"></div></div>
+                <p>TypeScript</p><div class="bar"><div class="fill" style="width: 40%;"></div></div>
+                <p>Angular</p><div class="bar"><div class="fill" style="width: 30%;"></div></div>
+
+                <h3>OUTILS & COLLABORATION</h3>
+                <p>Git</p><div class="bar"><div class="fill" style="width: 60%;"></div></div>
+                <p>Trello</p><div class="bar"><div class="fill" style="width: 90%;"></div></div>
+                <p>Figma</p><div class="bar"><div class="fill" style="width: 50%;"></div></div>
+
+                <h3>ERP & ANALYSE DE DONNÉES</h3>
+                <p>Odoo</p><div class="bar"><div class="fill" style="width: 45%;"></div></div>
+                <p>PowerBI</p><div class="bar"><div class="fill" style="width: 40%;"></div></div>
+            </div>
+    
+            <!-- CV Preview -->
+            <div class="cv-container">
+                <img src="images/cv.png" alt="CV de Solène">
+                <a href="docs/CV_Martin_Solene.pdf" download class="btn">📥 Télécharger mon CV</a>
+            </div>            
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <div class="swiper mySwiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide project-item">
+                    <img src="images/projetRist.png" alt="Aperçu du Projet RIST">
+                    <h3>RIST</h3>
+                    <p><strong>Description :</strong> Implémentation de Mobility Online pour gérer les mobilités des étudiants.</p>
+                    <p><strong>Langages & Outils :</strong> PHP, HTML, CSS, JavaScript, SQL, Bootstrap, Figma</p>
+                </div>
+                <div class="swiper-slide project-item">
+                    <img src="images/projetClassroomClerk.png" alt="Aperçu du Projet Classroom Clerk">
+                    <h3>Classroom Clerk</h3>
+                    <p><strong>Description :</strong> Portail web automatisant la récupération des infos étudiantes via Microsoft et GitHub.</p>
+                    <p><strong>Langages & Outils :</strong> Deno, Fresh, OAuth Azure</p>
+                </div>
+                <div class="swiper-slide project-item">
+                    <img src="images/projetMobilityOnline.png" alt="Aperçu du Projet Mobility Online">
+                    <h3>Mobility Online</h3>
+                    <p><strong>Description :</strong> Supervision et administration des mobilités des étudiants.</p>
+                    <p><strong>Compétences :</strong> Recueil et analyse des besoins, gestion de projet</p>
+                </div>
+                <div class="swiper-slide project-item">
+                    <img src="images/projetBTSPlay.png" alt="Aperçu du Projet BTSPlay">
+                    <h3>BTSPlay</h3>
+                    <p><strong>Description :</strong> Implémentation d’un outil de gestion spécifique.</p>
+                    <p><strong>Langages & Outils :</strong> PHP, HTML, CSS, JavaScript, SQL</p>
+                </div>
+            </div>
+            <!-- Flèches de navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    
+    <section id="recommendations">
+        <h2>Recommandations</h2>
+        <div class="recommendations-container">
+    
+            <!-- Exemple de recommandation -->
+            <div class="recommendation-item">
+                <img src="images/profDezeque.jpg" alt="Photo de Professeur 1">
+                <blockquote>
+                    « Solène possède une excellente capacité d&#39;analyse et une grande aisance dans la gestion
+                    de projets, son travail est toujours bien structuré et réfléchi. »
+                </blockquote><br>
+                <p class="profNom">O. Dézèque</p>
+                <p>
+                    Enseignant en Communication de BUT
+                </p>
+            </div>
+    
+            <!-- Dupliquez pour d'autres recommandations -->
+            <div class="recommendation-item">
+                <img src="images/profValles.jpg" alt="Photo de Professionnel 2">
+                <blockquote>
+                    « En mettant au service de la promotion sa bonne humeur et sa rigueur, Solène est devenu un
+                    élément moteur de la promotion. »
+                </blockquote><br><br>
+                <p class="profNom">N. Vallès</p>
+                <p>
+                    Enseignante en Gestion de projet de BUT
+                </p>
+            </div>
+            <div class="recommendation-item">
+                <img src="images/profAnonyme.jpg" alt="Photo de Professionnel 2">
+                <blockquote>
+                    « Des résultats très satisfaisants, notamment sur le début de formation. Solène est un élément moteur dans son
+                    groupe, beau dynamisme. »
+                </blockquote><br>
+                <p class="profNom">M. Bruyère</p>
+                <p>
+                    Enseignante en Mathématiques de BUT
+                </p>
+            </div>
+    
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-column contact-info">
+                <h2>Contact</h2>
+                <p>Vous recherchez une alternante motivée, organisée et passionnée par le monde du numérique et la gestion de projets ? Je serai ravie de contribuer à vos projets futurs. N'hésitez pas à me contacter sur mon adresse mail ou mes réseaux sociaux.</p>
+            </div>
+            <div class="footer-column social-links">
+                <div class="social-group">
+                    <a href="mailto:solenelina@gmail.com" class="social-link">
+                        <img src="images/icons/gmail.png" alt="Email" class="social-icon" /> solenelina@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/sol%C3%A8ne-martin-a1ba06263/" target="_blank" class="social-link">
+                        <img src="images/icons/linkedin.png" alt="LinkedIn" class="social-icon" /> Solène Martin
+                    </a>
+                </div>
+                <div class="social-group">
+                    <a href="https://github.com/Solenelina"  class="social-link">
+                        <img src="images/icons/github.png" alt="GitHub" class="social-icon" />
+                        Solenelina
+                    </a>
+                    <a href="https://instagram.com/shinobiisolene" target="_blank" class="social-link">
+                        <img src="images/icons/insta.png" alt="Instagram" class="social-icon" /> @shinobiisolene
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Inclure Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
