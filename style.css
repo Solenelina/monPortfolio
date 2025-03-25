@@ -6,19 +6,40 @@
     font-family: Arial, sans-serif;
 }
 
+/* Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #5880ab, #234468);
+    border-radius: 5px;
+}
+
+html {
+    scrollbar-color: #234468 #222;
+    scrollbar-width: thin;
+}
+
 /* Header */
 header {
     position: absolute;
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Aligne le titre à gauche et le menu à droite */
-    align-items: center; /* Centre verticalement */
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     color: white;
+    z-index: 1000;
 }
 
+/* Navigation */
 nav {
     display: flex;
     width: 100%;
@@ -26,16 +47,65 @@ nav {
     align-items: center;
 }
 
-nav ul {
+/* Liens du menu */
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-left: auto; /* Déplace la liste à droite */
+    margin-left: auto;
 }
 
-nav a {
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
+}
+
+/* Icône menu burger */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* RESPONSIVE MENU */
+
+/* Tablette & Mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        margin-top: 22px;
+    }
 }
 
 /* Section Hero */
@@ -147,12 +217,13 @@ nav a {
 
 .soft-skills {
     display: flex;
-    justify-content: center; /* Centre les éléments sur la page */
-    flex-wrap: wrap; /* Permet le passage à la ligne sur petits écrans */
-    gap: 30px; /* Espacement entre les éléments */
-    min-width: 500px; /* Largeur minimale pour éviter l'écrasement */
-    max-width: 800px; /* Largeur maximale pour contrôler la mise en page */
-    margin: 30px auto 60px auto; /* Centre le bloc dans la page */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    min-width: 500px;
+    max-width: 800px;
+    margin: 30px auto 60px auto;
+    margin-bottom: 3%;
 }
 
 .soft-skills div {
@@ -171,12 +242,19 @@ nav a {
     gap: 50px;
 }
 
-.hard-skills {
-    flex: 1;
+/* Conteneur principal */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-#skillTop {
-    margin-top: 0;
+/* Hard Skills */
+.hard-skills {
+    flex: 1;
+    max-width: 50%;
 }
 
 .hard-skills h3 {
@@ -190,8 +268,7 @@ nav a {
     height: 10px;
     background: #ddd;
     border-radius: 5px;
-    margin-bottom: 10px;
-    margin-top: 2.8px;
+    margin: 5px 0;
 }
 
 .fill {
@@ -200,13 +277,19 @@ nav a {
     border-radius: 5px;
 }
 
+/* CV Container */
 .cv-container {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    align-content: space-around;
+    max-width: 50%;
 }
 
 .cv-container img {
+    margin-top: 20px;
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
@@ -214,13 +297,44 @@ nav a {
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
+    margin-top: 4%;
     padding: 10px 20px;
-    background: #007BFF;
+    background: #363e50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablette */
+@media screen and (max-width: 1024px) {
+    .hard-skills, .cv-container {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hard-skills, .cv-container {
+        max-width: 90%;
+    }
+
+    .bar {
+        height: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 #typing-text {
