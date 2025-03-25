@@ -175,12 +175,7 @@ nav {
     font-family: monospace;
 }
 
-/* Section A propos */
-#about {
-    padding: 50px;
-    text-align: center;
-}
-
+/* Section À propos */
 #about {
     background: #333b48;
     color: white;
@@ -195,17 +190,38 @@ nav {
     max-width: 1000px;
     margin: auto;
     text-align: left;
+    flex-wrap: wrap; /* Permet le passage en colonne sur petits écrans */
+    gap: 20px;
 }
 
 .about-container p {
     flex: 1;
     font-size: 1.1em;
     line-height: 1.6;
+    min-width: 300px; /* Évite que le texte ne devienne trop étroit */
 }
 
 .about-container img {
     height: 330px;
-    border-radius: 300px;
+    width: auto;
+    border-radius: 50%;
+    max-width: 100%; /* Empêche l'image de déborder */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container p {
+        font-size: 1em;
+    }
+
+    .about-container img {
+        height: 250px;
+    }
 }
 
 
@@ -214,27 +230,43 @@ nav {
     padding: 50px 9%;
     background: #f8f8f8;
 }
-
 .soft-skills {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    min-width: 500px;
+    gap: 20px;
+    width: 90%;
     max-width: 800px;
-    margin: 30px auto 60px auto;
-    margin-bottom: 3%;
+    margin: 30px auto;
 }
 
 .soft-skills div {
     text-align: center;
     max-width: 120px;
+    flex: 1 1 120px; /* Permet aux éléments de s'adapter */
 }
 
 .soft-skills img {
     width: 50px;
     height: 50px;
 }
+
+/* Ajustements pour les petits écrans */
+@media (max-width: 600px) {
+    .soft-skills {
+        gap: 15px;
+    }
+
+    .soft-skills div {
+        flex: 1 1 80px; /* Réduit la taille minimale pour s'adapter */
+    }
+
+    .soft-skills img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 .skills-container {
     display: flex;
