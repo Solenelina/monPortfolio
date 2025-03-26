@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 i--;
             } else {
                 clearInterval(deleting);
-                setTimeout(callback, 500); // Pause avant d'écrire le suivant
+                setTimeout(callback, 500);
             }
         }, 50);
     }
@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     loopWords();
+
+    // ------------------------------
+    // 2) CARROUSEL SWIPER DES PROJETS
+    // ------------------------------
     var swiper = new Swiper('.mySwiper', {
         loop: true,
         autoplay: {
@@ -60,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
     
+    // ------------------------------
+    // 3) GESTION DE LA RESPONSIVITE
+    // ------------------------------
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
