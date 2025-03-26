@@ -56,12 +56,17 @@ document.addEventListener("DOMContentLoaded", function() {
             delay: 10000,
             disableOnInteraction: false,
         },
-        slidesPerView: 2,
+        slidesPerView: 1, // Par défaut : 1 slide sur mobile
         spaceBetween: 20,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            768: { // Dès 600px (tablettes), on passe à 2 slides
+                slidesPerView: 2
+            }
+        }
     });
     
     // ------------------------------
